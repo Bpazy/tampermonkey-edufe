@@ -12,13 +12,15 @@
     'use strict';
 
     // 解锁课程限制
-    window.toListen = function(chapterId, obj) {
-        obj.disabled = true;
-        var courseNodeId = document.getElementById("courseNodeId").value;
-        var planId = document.getElementById("planId").value;
-        var studentPlanId = document.getElementById("studentPlanId").value;
-        var customerPlanCourseId = document.getElementById("customerPlanCourseId").value;
-        window.location = "toListenListeningStudy.action?courseNodeId="+courseNodeId+"&planId="+planId+"&chapterId="+chapterId+"&studentPlanId="+studentPlanId+"&customerPlanCourseId="+customerPlanCourseId;
+    if (window.location.href.indexOf('studyPlanMyCourse') === -1) {
+        window.toListen = function(chapterId, obj) {
+            obj.disabled = true;
+            var courseNodeId = document.getElementById("courseNodeId").value;
+            var planId = document.getElementById("planId").value;
+            var studentPlanId = document.getElementById("studentPlanId").value;
+            var customerPlanCourseId = document.getElementById("customerPlanCourseId").value;
+            window.location = "toListenListeningStudy.action?courseNodeId="+courseNodeId+"&planId="+planId+"&chapterId="+chapterId+"&studentPlanId="+studentPlanId+"&customerPlanCourseId="+customerPlanCourseId;
+        }
     }
 
     // 直接看完课程
