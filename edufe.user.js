@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        http://training.sqkj.edufe.cn/*
+// @match        http://*.edufe.cn/*
 // @grant        none
 // ==/UserScript==
 
